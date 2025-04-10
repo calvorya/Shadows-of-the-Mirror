@@ -27,7 +27,7 @@ function App() {
               rel="noopener noreferrer"
               className="w-full sm:w-auto bg-gray-700 hover:bg-gray-800 active:bg-gray-900 text-white font-semibold py-3 px-8 rounded-lg shadow-lg hover:shadow-xl transition-all duration-200 ease-in-out transform hover:-translate-y-1 flex items-center justify-center gap-2"
             >
-              گیت‌هاب
+              گیت‌ هاب
             </a>
             <p className="text-sm text-gray-400 mt-4">by calvorya</p>
           </div>
