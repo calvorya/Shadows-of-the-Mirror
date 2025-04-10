@@ -36,15 +36,14 @@ jobs:
         ls -la dist
         ls -la dist/assets
 
-    - name: Create .nojekyll file
-      run: touch dist/.nojekyll
+    - name: Setup Pages
+      uses: actions/configure-pages@v4
+
+    - name: Upload artifact
+      uses: actions/upload-pages-artifact@v3
+      with:
+        path: 'dist'
 
     - name: Deploy to GitHub Pages
-      uses: JamesIves/github-pages-deploy-action@v4
-      with:
-        branch: gh-pages
-        folder: dist
-        clean: true
-        clean-exclude: |
-          .nojekyll
-        token: ${{ secrets.GITHUB_TOKEN }} 
+      id: deployment
+      uses: actions/deploy-pages@v4 
