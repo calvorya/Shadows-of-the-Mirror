@@ -1,0 +1,36 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    @apply font-sans antialiased;
+    color-scheme: light dark;
+  }
+
+  body {
+    @apply m-0 flex min-h-screen min-w-[320px] place-items-center bg-[#242424] text-white/90;
+  }
+
+  a {
+    @apply font-medium text-indigo-400 no-underline hover:text-indigo-500 transition-all duration-300 hover:scale-105;
+  }
+
+  h1 {
+    @apply text-[3.2em] leading-tight;
+  }
+
+  button {
+    @apply cursor-pointer rounded-lg border border-transparent bg-neutral-900 px-5 py-2.5 font-medium transition-all duration-300 hover:border-indigo-400 hover:scale-[1.02] hover:translate-y-[-2px] hover:shadow-lg hover:shadow-indigo-500/20 focus:outline-none focus-visible:outline-4;
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    @apply text-neutral-800 bg-white;
+  }
+
+  button {
+    @apply bg-neutral-100 hover:shadow-neutral-400/20;
+  }
+}
